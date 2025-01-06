@@ -7,5 +7,5 @@
 import Foundation
 
 struct PokemonResponse: Decodable {
-    let results: [PokemonDetailInfo]
+    let results: [Pokemon]
 }
