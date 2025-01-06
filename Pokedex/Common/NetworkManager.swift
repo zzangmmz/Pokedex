@@ -17,7 +17,7 @@ final class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    func fetchM<T: Decodable>(url: URL) -> Single<T> {
+    func fetch<T: Decodable>(url: URL) -> Single<T> {
         return Single.create { observer in
             let session = URLSession(configuration: .default)
             session.dataTask(with: URLRequest(url: url)) { data, response, error in
