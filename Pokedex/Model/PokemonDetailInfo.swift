@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct PokeDetailInfo: Decodable {
+struct PokemonDetailInfo: Decodable {
     let id: Int
     let name: String
     let type: [PokemonType]
