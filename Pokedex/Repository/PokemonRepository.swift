@@ -19,4 +19,14 @@ struct PokemonRepository {
         
         return networkManager.fetch(url: url)
     }
+    
+    func fetchPokemonDetail(pokemonId: Int) -> Single<PokemonResponse> {
+        let urlString = "https://pokeapi.co/api/v2/pokemon/\(pokemonId)"
+        
+        guard let url = URL(string: urlString) else {
+            return Single.error(NetworkError.invalidUrl)
+        }
+        
+        return networkManager.fetch(url: url)
+    }
 }
