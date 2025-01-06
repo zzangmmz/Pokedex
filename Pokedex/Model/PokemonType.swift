@@ -7,6 +7,6 @@
 import Foundation
 
 struct PokemonType: Decodable {
-    let name: String
-    let url: String
+    let slot: Int
+    let type: PokemonTypeInfo
 }
